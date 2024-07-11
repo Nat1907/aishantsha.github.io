@@ -1,0 +1,262 @@
+@charset "utf-8";
+/* CSS Document */
+/* Importing the Lumberjack font */
+@font-face {
+    font-family: 'Lumberjack';
+    src: url("lumberjack.regular.otf") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("img/Background.png") no-repeat center center fixed;
+    background-size: cover;
+	height: auto; /* Further reduced height to fit even less of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    position: absolute; /* Use absolute positioning */
+    top: 15px; /* Adjust position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1002; /* Ensure logo is above nav */
+    opacity: 1; /* Initially visible */
+    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+}
+
+.logo img {
+    max-width: 200px; /* Adjusted size for medium logo */
+}
+
+nav {
+    position: absolute; /* Use absolute positioning */
+    width: 90%; /* Reduced width to leave space on the sides */
+    background: #EDD2E3;
+    border: 2px solid #C88ED5;
+    border-radius: 20px;
+    top: 120px; /* Increased value to add space above the nav */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: top 0.3s, opacity 0.3s;
+    padding: 8px; /* Added padding for better appearance */
+    box-sizing: border-box; /* Ensure padding does not increase total width */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    padding: 10px 0;
+}
+
+nav ul li a {
+    font-family: 'Lumberjack', Arial, sans-serif;
+    color: #364760; /* Text color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em; /* Adjusted font size */
+    padding: 10px 15px;
+    border-radius: 10px; /* Rounded corners for each link */
+    transition: background-color 0.3s; /* Smooth background color change */
+}
+
+nav ul li a:hover {
+    background-color: #C88ED5; /* Hover background color */
+    color: white; /* Hover text color */
+}
+
+.content {
+    padding-top: 200px; /* Adjust according to nav height and header height */
+    height: 2000px; /* Example content height */
+}
+
+.diploma-title {
+    text-align: center; /* Center align the image title */
+    margin-top: 45px; /* Adjust margin from the navbar */
+}
+
+.diploma-title img {
+    max-width: 20%; /* Ensure the image fits within its container */
+}
+
+.additional-image {
+    text-align: center; /* Center align the additional image */
+    margin-top: 90px; /* Adjust margin from the diploma title */
+}
+
+.additional-image img {
+    max-width: 45%; /* Ensure the image fits within its container */
+}
+
+/* Line separator below the images */
+.line-separator {
+    width: 50%; /* Adjust width as needed */
+    height: 7px; /* Adjust height for the thickness of the line */
+    background-color: #C88ED5; /* Line color */
+    margin: 20px auto; /* Center the line and add top/bottom margin */
+    position: relative; /* Ensure relative positioning */
+	border-radius: 80px; /* Rounded corners for the frame */
+    top: 40px; /* Adjust top position to fine-tune placement */
+}
+
+.additional-image-2 {
+    text-align: center; /* Center align the additional image */
+    margin-top: 30px; /* Adjust margin from the diploma title */
+}
+
+.additional-image-2 img {
+    max-width: 50%; /* Ensure the image fits within its container */
+}
+
+/* SVG wave separator */
+#footer-separator {
+    position: relative;
+    left: 0;
+	top: -270px;
+    width: 100%;
+    height: auto; /* Adjust height as needed */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #E2BBD3; /* Footer background color */
+	top: -360px;
+    padding: 200px 0; /* Padding for top and bottom */
+    text-align: center; /* Center the text */
+    position: relative;
+	z-index: 1; /* Ensure the footer is above the wave */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+.contact-title {
+    font-family: 'Lumberjack', Arial, sans-serif;
+    color: #FFF7FC; /* Font color */
+    font-size: 1.8em; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Space below the title */
+    text-align: right; /* Align text to the right */
+    position: relative;
+    top: -90px; /* Adjust the top position */
+    right: -955px;
+}
+
+.connect-title {
+    font-family: 'Lumberjack', Arial, sans-serif;
+    color: #FFF7FC; /* Font color */
+    font-size: 1.8em; /* Adjust the font size as needed */
+    margin-top: 20px; /* Space above the title */
+    text-align: right; /* Align text to the right */
+    position: relative;
+    top: 130px; /* Adjust the top position */
+    right: 365px;
+}
+
+.thankyou-image {
+    position: absolute;
+    width: 40%; /* Adjust the maximum width as needed */
+    margin-left: 6%; /* Move image to the right */
+    margin-right: auto; /* Move image to the left */
+    left: 0;
+    top: -125px; /* Adjust the top position */
+}
+
+.contact-image {
+    position: absolute;
+    width: 24%; /* Adjust the maximum width as needed */
+    margin-left: auto; /* Move image to the right */
+    margin-right: 20%; /* Move image to the left */
+    right: -104px;
+    top: -10px; /* Adjust the top position */
+}
+
+.contact-image-2 {
+    position: absolute;
+    width: 16%; /* Adjust the maximum width as needed */
+    margin-left: auto; /* Move image to the right */
+    margin-right: 21%; /* Move image to the left */
+    right: 2px;
+    top: 55px; /* Adjust the top position to place it below the first contact image */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top:130px; /* Adjust the top position to place it below the connect title */
+    right: 275px;
+    margin-right: 0;
+}
+
+.social-icon {
+    width: 60px; /* Adjust width of icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 15px; /* Space between icons */
+}
+
+.carousel-container {
+    position: relative;
+	left: -10px;
+    width: 60%;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 20px; /* Rounded corners for the carousel container */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px; /* Add padding around the images */
+    border-radius: 20px; /* Rounded corners for each image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 60%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Rounded corners for the images */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow for images */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.carousel-button.prev {
+    left: 130px;
+}
+
+.carousel-button.next {
+    right: 130px;
+}
